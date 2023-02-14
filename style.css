@@ -414,7 +414,11 @@ td {
     padding: 0.5rem;
   }
   .modal .left-modal .img-box {
-    height: 100px;
+    height: 30px;
+    width: 100%;
+  }
+  .modal .left-modal .img-box img {
+    height: 50px;
   }
   .modal .right-modal {
     padding: 0.5rem;
@@ -429,5 +433,15 @@ td {
 
   .modal .right-modal .modal-btn {
     margin-top: 10px;
+  }
+  .modal .right-modal .modal-btn #reg {
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.5rem;
+  }
+  .modal .right-modal .modal-btn #up {
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.5rem;
   }
 }
