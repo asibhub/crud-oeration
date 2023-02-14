@@ -1,0 +1,433 @@
+/* Google fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,600;1,200&family=Signika+Negative:wght@500;600;700&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Signika Negative", sans-serif;
+}
+
+.head {
+  background-color: rgb(63, 157, 162);
+  padding: 20px 10px;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* search part  */
+.part2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: rgb(31, 29, 37);
+  width: 100%;
+  padding: 0px 5rem;
+}
+.part2 .left-part {
+  display: flex;
+}
+.part2 .left-part #add {
+  background-color: rgb(61, 61, 156);
+  padding: 10px 10px;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  margin-right: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 1s;
+}
+.part2 .left-part #add:hover {
+  background-color: rgb(44, 28, 85);
+}
+.part2 .left-part #filter {
+  background-color: rgb(56, 110, 186);
+  padding: 10px 10px;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  margin-right: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 1s;
+}
+.part2 .left-part #filter:hover {
+  background-color: rgb(222, 24, 24);
+}
+
+.part2 .right-part {
+  display: flex;
+}
+.part2 .right-part #src {
+  color: rgb(56, 110, 186);
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.part2 .right-part #search {
+  border: none;
+  margin: 0px 7px;
+  border-bottom: 1px solid white;
+  padding: 0px 5px;
+  background: transparent;
+  outline: none;
+  color: white;
+  width: 300px;
+}
+.part2 .right-part #src-btn {
+  background-color: rgb(56, 110, 186);
+  color: white;
+  padding: 7px 15px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 1s;
+}
+.part2 .right-part #src-btn:hover {
+  background-color: blueviolet;
+}
+/* part 2 end  */
+
+/* Table  */
+.tbl {
+  padding: 0px 5rem;
+  margin-top: 100px;
+}
+.table-section {
+  background-color: whitesmoke;
+}
+.table-section table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  color: rgb(0, 0, 0);
+}
+.table-section table th {
+  color: rgb(234, 236, 239);
+  background-color: rgb(50, 127, 155);
+}
+.table-section table tr,
+th,
+td {
+  border: 1px solid rgb(219, 216, 216);
+  padding: 10px;
+}
+.table-section table tr:nth-child(even) {
+  background-color: rgba(000, 000, 000, 0.1);
+}
+#update {
+  background-color: green;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 5px 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: 1s;
+}
+#update:hover {
+  background-color: rgb(48, 99, 21);
+}
+#delete {
+  background-color: red;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 5px 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: 1s;
+}
+#delete:hover {
+  background-color: brown;
+}
+
+/* Modal Area  */
+.new-modal {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(000, 000, 000, 0.5);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.modal {
+  height: auto;
+  width: 60%;
+  position: fixed;
+  background-color: aliceblue;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top: 20px groove rgb(51, 137, 143);
+  box-shadow: 4px 1px 15px -1px rgba(0, 0, 0, 0.63);
+  -webkit-box-shadow: 4px 1px 15px -1px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: 4px 1px 15px -1px rgba(0, 0, 0, 0.63);
+  display: flex;
+}
+.modal .close {
+  color: white;
+  position: absolute;
+  right: -7px;
+  top: -28px;
+  background-color: red;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.modal .left-modal {
+  width: 30%;
+  height: 100%;
+  padding: 2rem;
+}
+.modal .left-modal .img-box {
+  display: flex;
+  width: 100%;
+  height: 200px;
+}
+.modal .left-modal .img-box img {
+  border-radius: 50%;
+}
+.modal .right-modal {
+  width: 65%;
+  height: 100%;
+  border-left: 5px groove rgb(51, 137, 143);
+  padding: 2rem;
+}
+.modal .right-modal .input-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.modal .right-modal .input-box input {
+  width: 70%;
+  border: none;
+  outline: none;
+  border-bottom: 2px groove rgb(62, 116, 170);
+  padding: 5px 10px;
+}
+
+.modal .right-modal .modal-btn {
+  margin-top: 30px;
+}
+.modal .right-modal .modal-btn #reg {
+  background-color: forestgreen;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+.modal .right-modal .modal-btn #up {
+  background-color: rgb(49, 47, 162);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+/* Resposive for md Device */
+@media only screen and (max-width: 1050px) {
+  .head {
+    font-size: 1.5rem;
+  }
+  .part2 .left-part #add {
+    padding: 8px 8px;
+    margin-right: 15px;
+    font-size: 0.8rem;
+  }
+  .part2 .left-part #filter {
+    padding: 8px 8px;
+    margin-right: 15px;
+    font-size: 0.8rem;
+  }
+  .part2 .right-part #search {
+    width: 200px;
+  }
+  .part2 .right-part #src-btn {
+    padding: 7px 10px;
+    font-size: 0.8rem;
+  }
+  .part2 .right-part #src {
+    font-size: 1.2rem;
+  }
+  .tbl {
+    padding: 0px 2rem;
+    margin-top: 50px;
+  }
+  .table-section table tr,
+  th,
+  td {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
+  #update {
+    padding: 3px 3px;
+    font-size: 0.7rem;
+    border-radius: 2px;
+  }
+  #delete {
+    padding: 3px 3px;
+    font-size: 0.7rem;
+    border-radius: 2px;
+  }
+
+  .modal {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .head {
+    padding: 15px 10px;
+    font-size: 1.5rem;
+  }
+  .part2 {
+    padding: 0px 1rem;
+  }
+  .part2 .left-part #add {
+    padding: 6px 8px;
+    margin-right: 8px;
+    font-size: 0.5rem;
+  }
+  .part2 .left-part #filter {
+    padding: 6px 8px;
+    margin-right: 8px;
+    font-size: 0.5rem;
+  }
+  .part2 .right-part #search {
+    width: 150px;
+  }
+  .part2 .right-part #src-btn {
+    padding: 4px 8px;
+    font-size: 0.5rem;
+  }
+  .part2 .right-part #src {
+    font-size: 1.2rem;
+  }
+  .table-section table th {
+    display: none;
+  }
+  .table-section table tr {
+    display: block;
+  }
+  .table-section table th,
+  .table-section table td {
+    padding: 1.5rem;
+  }
+  .table-section table td {
+    text-align: right;
+    display: block;
+    font-size: 1rem;
+  }
+  .table-section table td::before {
+    content: attr(data-title) ":";
+    float: left;
+    font-weight: bold;
+  }
+  .table-section table tr:nth-child(odd) {
+    background-image: linear-gradient(
+      to top,
+      rgb(87, 24, 110),
+      rgb(20, 20, 109)
+    );
+    color: white;
+  }
+
+  .modal {
+    width: 80%;
+  }
+  .modal .left-modal {
+    padding: 1rem;
+  }
+  .modal .left-modal .img-box {
+    height: 150px;
+  }
+  .modal .right-modal {
+    padding: 1rem;
+  }
+  .modal .right-modal .input-box {
+    font-size: 0.7rem;
+  }
+  .modal .right-modal .input-box input {
+    width: 70%;
+    padding: 5px 7px;
+  }
+
+  .modal .right-modal .modal-btn {
+    margin-top: 20px;
+  }
+  .modal .right-modal .modal-btn #reg {
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+  }
+  .modal .right-modal .modal-btn #up {
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 492px) {
+  .head {
+    padding: 10px 8px;
+    font-size: 1rem;
+  }
+  .part2 {
+    padding: 1rem 1rem;
+    height: auto;
+    flex-direction: column;
+  }
+  .part2 .right-part {
+    margin-top: 20px;
+  }
+  .part2 .right-part #search {
+    width: 200px;
+  }
+  .tbl {
+    padding: 0px 0.5rem;
+  }
+  .table-section table th,
+  .table-section table td {
+    padding: 1rem;
+  }
+  .table-section table td {
+    font-size: 0.8rem;
+  }
+
+  .modal {
+    width: 90%;
+  }
+  .modal .left-modal {
+    padding: 0.5rem;
+  }
+  .modal .left-modal .img-box {
+    height: 100px;
+  }
+  .modal .right-modal {
+    padding: 0.5rem;
+  }
+  .modal .right-modal .input-box {
+    font-size: 0.5rem;
+  }
+  .modal .right-modal .input-box input {
+    width: 70%;
+    padding: 3px 5px;
+  }
+
+  .modal .right-modal .modal-btn {
+    margin-top: 10px;
+  }
+}

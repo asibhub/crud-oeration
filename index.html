@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Css Link  -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Line awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <!-- Swat Aler CDN -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>CRUD operation</title>
+  </head>
+  <body>
+    <!-- This is the main section of the project -->
+    <section class="main-section">
+      <!-- Header part -->
+      <header class="head">
+        <h1><i class="las la-user-check"></i> Employee Status...</h1>
+      </header>
+
+      <!-- add button  search elements -->
+      <div class="part2">
+        <div class="left-part">
+          <button id="add"><i class="las la-plus"></i> Add Employee</button>
+          <button id="filter">
+            <i class="las la-filter"></i> Clear All Data
+          </button>
+          <input type="checkbox" name="" id="check" />
+        </div>
+        <div class="right-part">
+          <button id="src"><i class="las la-search"></i></button>
+          <input type="text" placeholder="Search" id="search" />
+          <button id="src-btn">Search</button>
+        </div>
+      </div>
+
+      <!-- table section  -->
+      <section class="tbl">
+        <div class="table-section">
+          <table>
+            <tr>
+              <th>Sr No</th>
+              <th>ID</th>
+              <th>Profile</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>E-mail</th>
+              <th>Office Code</th>
+              <th>Job Title</th>
+              <th>Action</th>
+            </tr>
+            <tbody id="table-data"></tbody>
+          </table>
+        </div>
+      </section>
+      <!-- Table end -->
+
+      <!-- Modal -->
+      <section class="new-modal">
+        <div class="modal">
+          <!-- close btn  -->
+          <i class="lar la-times-circle close"></i>
+
+          <!-- left part -->
+          <div class="left-modal">
+            <div class="img-box">
+              <img
+                src="images/profile.png"
+                width="100px"
+                height="100px"
+                alt=""
+                id="por-img"
+              />
+              <input type="file" id="upload-img" />
+            </div>
+          </div>
+
+          <!-- Right part  -->
+          <div class="right-modal">
+            <form action="" id="from">
+              <div class="input-box">
+                <label for="id">ID</label>
+                <input type="text" required id="idn" />
+              </div>
+              <div class="input-box">
+                <label for="f-name">Frist Name</label>
+                <input type="text" required id="f-name" />
+              </div>
+              <div class="input-box">
+                <label for="l-name">Last Name</label>
+                <input type="text" required id="l-name" />
+              </div>
+              <div class="input-box">
+                <label for="mail">E-mail</label>
+                <input type="email" required id="mail" />
+              </div>
+              <div class="input-box">
+                <label for="code">Office Code</label>
+                <input type="text" required id="code" />
+              </div>
+              <div class="input-box">
+                <label for="job">Job Title</label>
+                <input type="text" required id="job" />
+              </div>
+              <div class="modal-btn">
+                <button id="reg">Register</button>
+                <button disabled id="up">Update</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Modal End  -->
+    </section>
+
+    <!-- scrpit -->
+    <script src="script.js"></script>
+    <!-- Swear Alert CDN  -->
+  </body>
+</html>
